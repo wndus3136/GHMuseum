@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./main/main2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <title>Modern and Contemporary Art, Korea</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="./js/jquery.scrollTo.min.js"></script>
+
+<script>
+    $(function () {
+        $('.menu1').click(function () {
+            $('.menu2').slideUp();
+            if ($(this).children('.menu2').is(':hidden')) {
+                $(this).children('.menu2').slideDown();
+            } else {
+                $(this).children('.menu2').slideUp();
+            }
+        });
+        $('#popup_chk').click(function () {
+            $('.popup_bg').hide();
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.btn_top').fadeIn();
+            } else {
+                $('.btn_top').fadeOut();
+            }
+        })
+        $('.btn_top').click(function (e) {
+            e.preventDefault()
+            $(window).scrollTo(this.hash || 0, 1000)
+        });
+
+        $('#moreBtn').click(function () {
+            $('#storeMore').slideToggle();
+        });
+
+    });
+</script>
+
+<body>
+    <div class="popup_bg"></div>
+    <div class="popup_box">
+        <input type="checkbox" id="popup_chk" checked>
+        <div class="popup">
+            <div class="popup_txt">
+                <img src="./img/img.PNG" alt="">
+                <h5>국립현대미술관 관람 예약 바로가기</h5>
+                <p>화요일~일요일 10:00-18:00</p>
+            </div>
+            <a href="./sub/sub.html">
+                <h5>전시 관람 예약하기</h5>
+            </a>
+            <label for="popup_chk" class="popup_close">
+                <p>X</p>
+            </label>
+        </div>
+    </div>
+
+
+    <header id="header" class="header">
+        <div class="header_inner">
+            <div class="logo">
+                <a href="./index.html"><img src="./logo/left and right combination.png" alt="logo1"></a>
+            </div>
+            <div class="logo_web">
+                <a href="./index.html"><img src="./logo/left and right combination.png" alt="logo1"></a>
+            </div>
+            <div class="gnb_web">
+                <div class="login_web"><a href="./sub/sub.html">로그인</a></div>
+                <div class="join_web"><a href="./sub/sub.html">회원가입</a></div>
+                <div class="lang_web">
+                    <select name="uri" title="영문 선택됨" onchange="locationSite(this.value);">
+                        <option value="/site/main/home">KOR</option>
+                        <option value="/site/eng/home">ENG</option>
+                    </select>
+                </div>
+                <div class="search_web"><i class="fas fa-search" style="font-size: 25px;"></i></div>
+                <div class="mypage_web"><i class="fas fa-user" style="font-size: 25px;"></i></div>
+            </div>
+            <div class="gnb">
+                <div class="search"><i class="fas fa-search" style="font-size: 20px;"></i></div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <input type="checkbox" id="lnb_chk">
+        <div class="lnb_box">
+            <label for="lnb_chk" class="lnb_btn"><i class="fas fa-bars" style="font-size: 20px;"></i></label>
+            <div class="lnb_ex">
+                <div class="lnb_top">
+                    <div class="login"><a href="./sub/sub.html">로그인</a></div>
+                    <div class="join"><a href="./sub/sub.html">회원가입</a></div>
+                    <div class="lang">
+                        <select name="uri" title="영문 선택됨" onchange="locationSite(this.value);">
+                            <option value="/site/main/home">KOR</option>
+                            <option value="/site/eng/home">ENG</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="lnb">
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>공연·전시</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">전체일정</a></li>
+                            <li><a href="./sub/sub.html">오늘의 전시</a></li>
+                            <li><a href="./sub/sub.html">예정 전시</a></li>
+                            <li><a href="./sub/sub.html">이벤트</a></li>
+                            <li><a href="./sub/sub.html">전시해설</a></li>
+                            <li><a href="./sub/sub.html">디지털 미술관</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>공간·대관</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">공간안내</a></li>
+                            <li><a href="./sub/sub.html">입주신청</a></li>
+                            <li><a href="./sub/sub.html">프로그램 소개</a></li>
+                            <li><a href="./sub/sub.html">운영규정</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>아카데미</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">아카데미 안내</a></li>
+                            <li><a href="./sub/sub.html">수강신청</a></li>
+                            <li><a href="./sub/sub.html">아카데미 공지사항</a></li>
+                            <li><a href="./sub/sub.html">아카데미 FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>소식·이용·참여</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">미술관 소식</a></li>
+                            <li><a href="./sub/sub.html">오시는길·주차안내</a></li>
+                            <li><a href="./sub/sub.html">편의 서비스</a></li>
+                            <li><a href="./sub/sub.html">매거진</a></li>
+                            <li><a href="./sub/sub.html">관람예절</a></li>
+                            <li><a href="./sub/sub.html">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>미술연구</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">도서와 아카이브</a></li>
+                            <li><a href="./sub/sub.html">연구</a></li>
+                            <li><a href="./sub/sub.html">발간자료</a></li>
+                            <li><a href="./sub/sub.html">보존과학</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1">
+                        <a href="#!">
+                            <h4>기관소개</h4>
+                        </a>
+                        <ul class="menu2">
+                            <li><a href="./sub/sub.html">기관소개 메인</a></li>
+                            <li><a href="./sub/sub.html">소장품</a></li>
+                            <li><a href="./sub/sub.html">정보공개</a></li>
+                            <li><a href="./sub/sub.html">후원하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="lnb_web">
+            <li><a href="#!">
+                    <h4>공연·전시</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">전체일정</a></li>
+                    <li><a href="./sub/sub.html">오늘의 전시</a></li>
+                    <li><a href="./sub/sub.html">예정 전시</a></li>
+                    <li><a href="./sub/sub.html">이벤트</a></li>
+                    <li><a href="./sub/sub.html">전시해설</a></li>
+                    <li><a href="./sub/sub.html">디지털 미술관</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">
+                    <h4>공간·대관</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">공간안내</a></li>
+                    <li><a href="./sub/sub.html">입주신청</a></li>
+                    <li><a href="./sub/sub.html">프로그램 소개</a></li>
+                    <li><a href="./sub/sub.html">운영규정</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">
+                    <h4>아카데미</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">아카데미 안내</a></li>
+                    <li><a href="./sub/sub.html">수강신청</a></li>
+                    <li><a href="./sub/sub.html">아카데미 공지사항</a></li>
+                    <li><a href="./sub/sub.html">아카데미 FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">
+                    <h4>소식·이용·참여</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">미술관 소식</a></li>
+                    <li><a href="./sub/sub.html">오시는길·주차안내</a></li>
+                    <li><a href="./sub/sub.html">편의 서비스</a></li>
+                    <li><a href="./sub/sub.html">매거진</a></li>
+                    <li><a href="./sub/sub.html">관람예절</a></li>
+                    <li><a href="./sub/sub.html">고객센터</a></li>
+                </ul>
+            </li>
+            <li><a href="#!">
+                    <h4>미술연구</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">도서와 아카이브</a></li>
+                    <li><a href="./sub/sub.html">연구</a></li>
+                    <li><a href="./sub/sub.html">발간자료</a></li>
+                    <li><a href="./sub/sub.html">보존과학</a></li>
+                </ul>
+            </li>
+            <li class="institution"><a href="#!">
+                    <h4>기관소개</h4>
+                </a>
+                <ul class="menu_box">
+                    <li><a href="./sub/sub.html">기관소개 메인</a></li>
+                    <li><a href="./sub/sub.html">소장품</a></li>
+                    <li><a href="./sub/sub.html">정보공개</a></li>
+                    <li><a href="./sub/sub.html">후원하기</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="visual">
+        <div class="visual-class">
+            <div>
+                <img src="./img/poster/poster24.jpg" alt="poster1">
+            </div>
+            <div>
+                <img src="./img/poster/poster1.png" alt="poster2">
+            </div>
+            <div>
+                <img src="./img/poster/poster34.jpg" alt="poster3">
+            </div>
+            <div>
+                <img src="./img/poster/poster18.jpg" alt="poster4">
+            </div>
+            <div>
+                <img src="./img/poster/poster2.jpg" alt="poster5">
+            </div>
+            <div>
+                <img src="./img/poster/poster26.jpg" alt="poster6">
+            </div>
+        </div>
+        <div class="metaphor">
+            <ul>
+                <li>
+                    <img src="./img/icon/display2.png" alt="">
+                </li>
+                <p>오늘의 전시</p>
+            </ul>
+            <ul>
+                <li>
+                    <i class="fas fa-calendar-alt" style="color: #fff; font-size: 35px;"></i>
+                </li>
+                <p>전체 일정</p>
+            </ul>
+            <ul>
+                <li>
+                    <i class="fas fa-gift" style="color: #fff; font-size: 35px;"></i>
+                </li>
+                <p>이 벤 트</p>
+            </ul>
+            <ul>
+                <li>
+                    <i class="fas fa-palette" style="color: #fff; font-size: 35px;"></i>
+                </li>
+                <p>미술 가게</p>
+            </ul>
+        </div>
+    </div><!-- visual -->
+    <div class="visual_web_ex">
+        <div class="visual_web">
+            <div class="metaphor_web">
+                <ul>
+                    <li>
+                        <img src="./img/icon/display2.png" alt="">
+                    </li>
+                    <p>오늘의 전시</p>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fas fa-calendar-alt" style="color: #fff; font-size: 35px;"></i>
+                    </li>
+                    <p>전체 일정</p>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fas fa-gift" style="color: #fff; font-size: 35px;"></i>
+                    </li>
+                    <p>이 벤 트</p>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="fas fa-palette" style="color: #fff; font-size: 35px;"></i>
+                    </li>
+                    <p>미술 가게</p>
+                </ul>
+            </div>
+            <div class="visual_main">
+                <ul class="bxslider">
+                    <li>
+                        <div class="bxslider_txt">
+                            <P class="Seoul">서울</P>
+                            <p class="visual_tit">| 서울 7전시실 및 미디어랩</p>
+                            <h2>움직임을 만드는 움직임</h2>
+                            <p class="visual_name">[ Movement Making Movement ]</p>
+                            <p class="visual_day">2023-04-23(일) ~ 2023-09-24(일)</p>
+                            <a href="./sub/sub.html">
+                                <h5>자세히보기</h5>
+                            </a>
+                        </div>
+                        <div class="visual_poster">
+                            <img src="./img/poster/poster24.jpg" alt="poster1">
+                        </div>
+                    </li><!-- 1 -->
+                    <li>
+                        <div class="bxslider_txt">
+                            <P class="Cheongju">청주</P>
+                            <p class="visual_tit">| 청주 문화제조창 잔디광장</p>
+                            <h2>MMCA 청주프로젝트 2023 </br> «천대광: 집우집주»</h2>
+                            <p class="visual_name">[ The Universe ]</p>
+                            <p class="visual_day">2023-09-17(일) ~ 2023-07-23(일)</p>
+                            <a href="./sub/sub.html">
+                                <h5>자세히보기</h5>
+                            </a>
+                        </div>
+                        <div class="visual_poster">
+                            <img src="./img/poster/poster34.jpg" alt="poster2">
+                        </div>
+                    </li><!-- 2 -->
+                    <li>
+                        <div class="bxslider_txt">
+                            <P class="Deoksugung">덕수궁</P>
+                            <p class="visual_tit">| 덕수궁 전관</p>
+                            <h2>DNA: 한국미술 어제와 오늘</h2>
+                            <p class="visual_name">[ Dynamic & Alive Korean Art ]</p>
+                            <p class="visual_day">2023-05-06(토) ~ 2024-01-31(수)</p>
+                            <a href="./sub/sub.html">
+                                <h5>자세히보기</h5>
+                            </a>
+                        </div>
+                        <div class="visual_poster">
+                            <img src="./img/poster/poster14.jpg" alt="poster3">
+                        </div>
+                    </li><!-- 3 -->
+                    <li>
+                        <div class="bxslider_txt">
+                            <P class="Seoul">서울</P>
+                            <p class="visual_tit">| 서울 지하1층, 서울박스, 5전시실 및 복도</p>
+                            <h2>MMCA 현대차 시리즈 2023: 최우람 작은 방주</h2>
+                            <p class="visual_day">2023-03-11(토) ~ 2023-07-23(일)</p>
+                            <a href="./sub/sub.html">
+                                <h5>자세히보기</h5>
+                            </a>
+                        </div>
+                        <div class="visual_poster">
+                            <img src="./img/poster/poster18.jpg" alt="poster4">
+                        </div>
+                    </li><!-- 4 -->
+                    <li>
+                        <div class="bxslider_txt">
+                            <P class="Gwacheon">과천</P>
+                            <p class="visual_tit">| 과천 셔틀버스 승강장(대공원역, 미술관 정문, 후문)</p>
+                            <h2>MMCA 과천프로젝트 2021: <br> 쓸모없는 건축과 유용한 조각에 대하여</h2>
+                            <p class="visual_day">2023-06-18(일) ~ 2023-08-20(일)</p>
+                            <a href="./sub/sub.html">
+                                <h5>자세히보기</h5>
+                            </a>
+                        </div>
+                        <div class="visual_poster">
+                            <img src="./img/poster/poster2.jpg" alt="poster5">
+                        </div>
+                    </li><!-- 5 -->
+                </ul>
+                <div id="bx-pager">
+                    <a data-slide-index="0" href=""><img src="./img/poster/poster24.jpg" alt=""></a>
+                    <a data-slide-index="1" href=""><img src="./img/poster/poster34.jpg" alt=""></a>
+                    <a data-slide-index="2" href=""><img src="./img/poster/poster14.jpg" alt=""></a>
+                    <a data-slide-index="3" href=""><img src="./img/poster/poster18.jpg" alt=""></a>
+                    <a data-slide-index="4" href=""><img src="./img/poster/poster2.jpg" alt=""></a>
+                </div>
+            </div><!-- visual_main-->
+        </div><!-- visual_web -->
+    </div><!-- visual_Web_ex -->
+    <div class="contents_slick_mobile">
+        <div class="contents_slick_mobile01">
+            <div class="mobile_Museum">
+                <div class="mobile_slick_img">
+                    <img src="./img/poster/poster20.jpg" alt="poster1">
+                </div>
+                <div class="mobile_area_box Seoul">서울</div>
+            </div>
+            <div class="mobile_Museum">
+                <div class="mobile_slick_img">
+                    <img src="./img/poster/poster6.jpg" alt="poster2">
+                </div>
+                <div class="mobile_area_box Gwacheon">과천</div>
+            </div>
+            <div class="mobile_Museum">
+                <div class="mobile_slick_img">
+                    <img src="./img/poster/poster15.jpg" alt="poster3">
+                </div>
+                <div class="mobile_area_box Deoksugung">덕수궁</div>
+            </div>
+            <div class="mobile_Museum">
+                <div class="mobile_slick_img">
+                    <img src="./img/poster/poster31.jpg" alt="poster4">
+                </div>
+                <div class="mobile_area_box Cheongju">청주</div>
+            </div>
+        </div>
+    </div><!-- contents_slick_mobile -->
+    <section class="contents_ex">
+        <input type="radio" name="contents_tab" id="contents_tab01" checked>
+        <input type="radio" name="contents_tab" id="contents_tab02">
+        <input type="radio" name="contents_tab" id="contents_tab03">
+        <input type="radio" name="contents_tab" id="contents_tab04">
+        <input type="radio" name="contents_tab" id="contents_tab05">
+
+        <div class="contents_label">
+            <label for="contents_tab01" class="contents_label01">미술관</label>
+            <label for="contents_tab02" class="contents_label02">서울</label>
+            <label for="contents_tab03" class="contents_label03">과천</label>
+            <label for="contents_tab04" class="contents_label04">덕수궁</label>
+            <label for="contents_tab05" class="contents_label05">청주</label>
+        </div>
+
+        <ul class="contents">
+            <li class="contents_sheet01">
+                <div class="contents_slider">
+                    <div class="Museum">
+                        <img src="./img/poster/poster20.jpg" alt="poster1">
+                        <div class="area_box Seoul">서울</div>
+                        <div class="contens_box">
+                            <h5>나 너의 기억</h5>
+                            <p>2023.4.02(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Museum">
+                        <img src="./img/poster/poster6.jpg" alt="poster2">
+                        <div class="area_box Gwacheon">과천</div>
+                        <div class="contens_box">
+                            <h5>도열하는 기둥</h5>
+                            <p>2023.6.05(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Museum">
+                        <img src="./img/poster/poster15.jpg" alt="poster3">
+                        <div class="area_box Deoksugung">덕수궁</div>
+                        <div class="contens_box">
+                            <h5>탄생 100주년 기념</h5>
+                            <p>2023.9.10(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Museum">
+                        <img src="./img/poster/poster31.jpg" alt="poster4">
+                        <div class="area_box Cheongju">청주</div>
+                        <div class="contens_box">
+                            <h5>나는 나대로 혼자서 간다</h5>
+                            <p>2023.9.18(월) ~</p>
+                        </div>
+                    </div>
+                </div>
+            </li><!-- Museum -->
+            <li class="contents_sheet02">
+                <div class="contents_slider">
+                    <div class="Seoul">
+                        <img src="./img/poster/poster20.jpg" alt="poster5">
+                        <div class="area_box Seoul">서울</div>
+                        <div class="contens_box">
+                            <h5>나 너의 기억</h5>
+                            <p>2023.4.02(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Seoul">
+                        <img src="./img/poster/poster18.jpg" alt="poster6">
+                        <div class="area_box Seoul">서울</div>
+                        <div class="contens_box">
+                            <h5>MMCA 작은방주</h5>
+                            <p>2023.4.02(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Seoul">
+                        <img src="./img/poster/poster24.jpg" alt="poster7">
+                        <div class="area_box Seoul">서울</div>
+                        <div class="contens_box">
+                            <h5>움직임을 만드는 움직임</h5>
+                            <p>2023.4.02(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Seoul">
+                        <img src="./img/poster/poster25.jpg" alt="poster8">
+                        <div class="area_box Seoul">서울</div>
+                        <div class="contens_box">
+                            <h5>해시태그2023</h5>
+                            <p>2023.4.02(일) ~</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="contents_sheet03">
+                <div class="contents_slider">
+                    <div class="Gwacheon">
+                        <img src="./img/poster/poster6.jpg" alt="poster9">
+                        <div class="area_box Gwacheon">과천</div>
+                        <div class="contens_box">
+                            <h5>도열하는 기둥</h5>
+                            <p>2023.6.05(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Gwacheon">
+                        <img src="./img/poster/poster1.png" alt="poster10">
+                        <div class="area_box Gwacheon">과천</div>
+                        <div class="contens_box">
+                            <h5>모던 데자인</h5>
+                            <p>2023.6.05(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Gwacheon">
+                        <img src="./img/poster/poster2.jpg" alt="poster11">
+                        <div class="area_box Gwacheon">과천</div>
+                        <div class="contens_box">
+                            <h5>쓸모없는 건축과 유용한 조각</h5>
+                            <p>2023.6.05(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Gwacheon">
+                        <img src="./img/poster/poster5.jpg" alt="poster12">
+                        <div class="area_box Gwacheon">과천</div>
+                        <div class="contens_box">
+                            <h5>젊은 모색</h5>
+                            <p>2023.6.05(월) ~</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="contents_sheet04">
+                <div class="contents_slider">
+                    <div class="Deoksugung">
+                        <img src="./img/poster/poster15.jpg" alt="poster13">
+                        <div class="area_box Deoksugung">덕수궁</div>
+                        <div class="contens_box">
+                            <h5>탄생 100주년 기념</h5>
+                            <p>2023.9.10(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Deoksugung">
+                        <img src="./img/poster/poster12.jpg" alt="poster14">
+                        <div class="area_box Deoksugung">덕수궁</div>
+                        <div class="contens_box">
+                            <h5>문신(文信) : 우주를 향하여</h5>
+                            <p>2023.9.10(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Deoksugung">
+                        <img src="./img/poster/poster14.jpg" alt="poster15">
+                        <div class="area_box Deoksugung">덕수궁</div>
+                        <div class="contens_box">
+                            <h5>DNA: 한국미술 어제와 오늘</h5>
+                            <p>2023.9.10(일) ~</p>
+                        </div>
+                    </div>
+                    <div class="Deoksugung">
+                        <img src="./img/poster/poster16.jpg" alt="poster16">
+                        <div class="area_box Deoksugung">덕수궁</div>
+                        <div class="contens_box">
+                            <h5>사물을 보는 법</h5>
+                            <p>2023.9.10(일) ~</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="contents_sheet05">
+                <div class="contents_slider">
+                    <div class="Cheongju">
+                        <img src="./img/poster/poster31.jpg" alt="poster17">
+                        <div class="area_box Cheongju">청주</div>
+                        <div class="contens_box">
+                            <h5>나는 나대로 혼자서 간다</h5>
+                            <p>2023.9.18(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Cheongju">
+                        <img src="./img/poster/poster32.jpg" alt="poster18">
+                        <div class="area_box Cheongju">청주</div>
+                        <div class="contens_box">
+                            <h5>나만의 보물을 찾아서</h5>
+                            <p>2023.9.18(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Cheongju">
+                        <img src="./img/poster/poster33.jpg" alt="poster19">
+                        <div class="area_box Cheongju">청주</div>
+                        <div class="contens_box">
+                            <h5>나와 당신의 이야기</h5>
+                            <p>2023.9.18(월) ~</p>
+                        </div>
+                    </div>
+                    <div class="Cheongju">
+                        <img src="./img/poster/poster34.jpg" alt="poster20">
+                        <div class="area_box Cheongju">청주</div>
+                        <div class="contens_box">
+                            <h5>«천대광: 집우집주»</h5>
+                            <p>2023.9.18(월) ~</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+
+    <div class="container_ex">
+        <div class="container">
+            <div class="container_notice">
+                <section class="tab_menu">
+                    <input type="radio" name="tab" id="tab01" checked>
+                    <input type="radio" name="tab" id="tab02">
+                    <div class="label_box">
+                        <label for="tab01" class="label_01">
+                            <h5>소 식 지</h5>
+                        </label>
+                        <label for="tab02" class="label_02">
+                            <h5>예정전시</h5>
+                        </label>
+                        <div class="tab_menu_plus"><a href="#!"><i class="fas fa-plus" style="color: #E5E5E5"></i></a>
+                        </div>
+                    </div>
+                    <div class="sheet">
+                        <div class="sheet_01">
+                            <div class="txt_left">
+                                <p>[서울] 국립현대미술관 서울 아트존 리뉴얼 공사준비 안내 미술...</p>
+                                <p>[국립현대미술관] 전시관람 예약시스템 개편 안내(3.13. 월~)</p>
+                                <p>[국립현대미술관] 국립현대미술관 뉴스레터 <뮤클리> 접속 지...</p>
+                                <p>[청주] 국립현대미술관 청주 개방 수장고 어린이 교육 프로그램...</p>
+                                <p>[국립현대미술관] <프로젝트 해시태그 2023>공모</p>
+                                <p>[공통] 국립현대미술관 정부미술은행 권리자 불명 저작물 공고</p>
+                                <p>[공통] 홈페이지 서비스 일시중단(23.2.24./19시-19시 30분)...</p>
+                            </div>
+                            <div class="txt_right">
+                                <p>2023-03-16</p>
+                                <p>2023-03-13</p>
+                                <p>2023-03-10</p>
+                                <p>2023-03-09</p>
+                                <p>2023-02-27</p>
+                                <p>2023-02-24</p>
+                                <p>2023-02-24</p>
+                            </div>
+                        </div><!-- sheet_01 -->
+                        <div class="sheet_02">
+                            <div class="txt_left">
+                                <p>[청주] 전시의 전시</p>
+                                <p>[서울] 서스펜스의 도시, 워치 앤 칠 3.0</p>
+                                <p>[과천] 젊은 모색 2023</p>
+                                <p>[과천] 동산 박주환 컬렉션 특별전</p>
+                                <p>[서울] 한국 실험미술 1960-1970</p>
+                                <p>[서울] 소장품특별전 2023: 혼돈과 새로움(가제)</p>
+                                <p>[덕수궁] 장욱진(가제)</p>
+                            </div>
+                            <div class="txt_right">
+                                <p>2023-06-16</p>
+                                <p>2023-05-26</p>
+                                <p>2023-05-18</p>
+                                <p>2023-05-12</p>
+                                <p>2023-04-27</p>
+                                <p>2023-04-11</p>
+                                <p>2023-03-19</p>
+                            </div>
+                        </div><!-- sheet_02 -->
+                    </div>
+                </section><!-- tab_menu -->
+            </div>
+            <div class="container_bottom">
+                <div class="container_news">
+                    <h3>뉴스레터</h3>
+                    <div class="news_tab">
+                        <input type="radio" name="news_tab" id="news_tab01" checked>
+                        <input type="radio" name="news_tab" id="news_tab02">
+                        <input type="radio" name="news_tab" id="news_tab03">
+                        <input type="radio" name="news_tab" id="news_tab04">
+                        <input type="radio" name="news_tab" id="news_tab05">
+                        <input type="radio" name="news_tab" id="news_tab06">
+
+                        <div class="nesw_label">
+                            <label for="news_tab01" class="news_label_01"></label>
+                            <label for="news_tab02" class="news_label_02"></label>
+                            <label for="news_tab03" class="news_label_03"></label>
+                            <label for="news_tab04" class="news_label_04"></label>
+                            <label for="news_tab05" class="news_label_05"></label>
+                            <label for="news_tab06" class="news_label_06"></label>
+                        </div>
+
+                        <div class="new_sheet">
+                            <div class="news_sheet_01"><img src="./img/news/news1_m.jpg" alt="news1_m"></div>
+                            <div class="news_sheet_02"><img src="./img/news/news6_m.jpg" alt="news2_m"></div>
+                            <div class="news_sheet_03"><img src="./img/news/news10_m.jpg" alt="news3_m"></div>
+                            <div class="news_sheet_04"><img src="./img/news/news5_m.jpg" alt="news4_m"></div>
+                            <div class="news_sheet_05"><img src="./img/news/news4_m.jpg" alt="news5_m"></div>
+                            <div class="news_sheet_06"><img src="./img/news/news9_m.jpg" alt="news6_m"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_youtube">
+                    <h3>YouTube</h3>
+                    <ul>
+                        <li>
+                            <p>《프로젝트 해시태그》 아카이브 바이닐 | main</p>
+                            <span>2023. 03. 26</span>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=LMDmX_4bCJg">
+                                    <img src="./img/youtube/youtube3.JPG" alt="youtube3">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>MMCA VRㅣWho's the Next?</p>
+                            <span>2023. 04. 01</span>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=yJKG_N6o4mk">
+                                    <img src="./img/youtube/youtube4.JPG" alt="youtube4">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>《MMCA 이건희컬렉션 특별전: 이중섭》 국립현대미술관 큐레이터 전시투어</p>
+                            <span>2022. 10. 30</span>
+                            <div>
+                                <a href="hhttps://www.youtube.com/watch?v=NibIeMZ2j_Q">
+                                    <img src="./img/youtube/youtube2.JPG" alt="youtube2">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>《MMCA 이건희컬렉션 특별전: 모네와 피카소, 파리의 아름다운 순간들》</p>
+                            <span>2022. 11. 24</span>
+                            <div>
+                                <a href="https://www.youtube.com/watch?v=7H-aB8HwRx8">
+                                    <img src="./img/youtube/youtube1.JPG" alt="youtube1">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- container_bottom -->
+            <div class="container_metaphor">
+                <ul>
+                    <li>
+                        <p>오늘의 전시</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>전체 일정</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>이 벤 트</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>미술 가게</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="container_metaphor_web">
+                <ul>
+                    <li>
+                        <p>공연·전시</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>공간안내</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>교통·주차</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>유실물</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>1:1문의</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>MY Page</p>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- container -->
+    </div>
+    <div class="store_ex">
+        <div class="store">
+            <div class="store_top">
+                <div>
+                    <img src="./img/poster/banner02.jpg" alt="banner01">
+                </div>
+                <div class="store_box">
+                    <img src="./img/poster/banner01.jpg" alt="banner02">
+                </div>
+            </div>
+            <h1>Best Sellers</h1>
+            <button id="moreBtn">
+                <h5>더보기 +</h5>
+            </button>
+            <ul class="store_products">
+                <li>
+                    <img src="./img/poster/product1.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>유영국,<작품>(1974)</h5>
+                        <p>240,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product2.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>김환기,<여인들과 항아리>
+                        </h5>
+                        <p>300,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product3.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>크리스토 & 잔클로드,<계곡장막>
+                        </h5>
+                        <p>140,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product4.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>문신,<서대문에서>
+                        </h5>
+                        <p>150,000원</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="store_products" id="storeMore" hidden>
+                <li>
+                    <img src="./img/poster/product5.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>MI 펄볼펜세트</h5>
+                        <p>6,600원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product6.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>MMCA 3단 암막양우산(오렌지)</h5>
+                        <p>42,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product7.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>이중섭,<춤추는 가족>
+                        </h5>
+                        <p>150,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/poster/product8.png" alt="product1">
+                    <div class="store_txt">
+                        <h5>문신 시메츠리 키트</h5>
+                        <p>14,800원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer_ex">
+        <div class="footer_top">
+            <div class="footer_top_txt">
+                <ul>
+                    <li><a href="./sub/sub.html">사이트 맵</a></li>
+                    <li><a href="./sub/sub.html">오시는 길</a></li>
+                    <li><a href="./sub/sub.html">정보공개</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./sub/sub.html">이용약관·정책 </a></li>
+                    <li><a href="./sub/sub.html">개인정보처리방침 </a></li>
+                    <li><a href="./sub/sub.html">문화체육 관광부 </a></li>
+                </ul>
+            </div>
+            <div class="footer_sns">
+                <div>
+                    <a href="https://www.instagram.com/mmcakorea/"><img src="./img/sns_logo/instagram_gray.png"
+                            alt="insta"></a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/user/MMCAKorea"><img src="./img/sns_logo/youtube_gray.png"
+                            alt="youtube"></a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/mmcakorea"><img src="./img/sns_logo/facebook_gray.png"
+                            alt="facebook"></a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/mmcakorea"><img src="./img/sns_logo/Twitter-logo_gray.png"
+                            alt="twitter"></a>
+                </div>
+                <div>
+                    <a href="https://tv.naver.com/mmca"><img src="./img/sns_logo/navertv_gray.png" alt="navertv"></a>
+                </div>
+                <div>
+                    <a href="https://post.naver.com/mmca2017"><img src="./img/sns_logo/naverpost_gray.png"
+                            alt="naverpost"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_bottom_inner">
+                <div class="footer_left">
+                    <div class="footer_logo">
+                        <img src="./logo/left and right combination_gray.png" alt="logo">
+                    </div>
+                    <div class="copyright">
+                        <span>Copyright ⓒ 201National Museym of Modern and Contemporary Art.Korea</span>
+                    </div>
+                </div><!-- footer_left -->
+                <div class="footer_bottom_txt">
+                    <div class="txt_01">
+                        <p>대표자 <span>윤범모</span></p>
+                        <p>사업자번호 <span>138-83-9500</span></p>
+                    </div>
+                    <div class="txt_02">
+                        <div>
+                            <p>대표전화 <span>(서울) 02-3701-9500 (덕수궁) 02-2022-0600</span></p>
+                        </div>
+                        <div>
+                            <p><span>(과천) 02-2188-6000 (청주) 043-261-1400</span></p>
+                        </div>
+                    </div>
+                </div><!-- footer_bottom_txt -->
+            </div>
+        </div><!-- footer_bottom -->
+    </footer>
+    <div> <a href="#header" class="btn_top">TOP</a></div>
+
+
+
+    <!--    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.visual-class').slick({
+                slide: 'div',
+                Infinity: true,
+                autoplay: true,
+                dots: true,
+                arrows: true
+            });
+            $('.contents_slick_mobile01').slick({
+                slide: 'div',
+                Infinity: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 800,
+                centerPadding: '0',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                slickPause: true,
+                slickPlay: true,
+                dots: true,
+                centerMode: true
+            });
+            $('.bxslider').bxSlider({
+                pagerCustom: '#bx-pager',
+                mode: 'fade',
+                auto: true,
+                autoControls: true,
+                slideMargin: 20
+            });
+            $('.contents_slider').slick({
+                infinite: true,
+                autoplaySpeed: 2000,
+                autoplay: true,
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+</body>
+
+</html>
